@@ -24,6 +24,7 @@ public class Iteration {
 				System.out.print("*");
 			}
 			System.out.print("\n");
+			
 		}
 
 	}
