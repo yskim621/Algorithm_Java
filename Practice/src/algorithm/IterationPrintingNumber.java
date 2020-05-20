@@ -1,6 +1,6 @@
 package algorithm;
 
-public class Iteration2 {
+public class IterationPrintingNumber {
 
 	public static void main(String[] args) {
 		int num = 0;

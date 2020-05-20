@@ -1,6 +1,6 @@
 package algorithm;
 
-public class Iteration {
+public class IterationPrintingStar {
 
 	public static void main(String[] args) {
 		// 별 찍기 최종 
