@@ -29,14 +29,13 @@ public class TwistedNumberRectangle {
 		    	for(int j = 0; j < m; j++){
 			    	System.out.printf("%d ", ++sum);
 			    }
-		    	sum += m;
-			    System.out.println();
+		    	sum += m; 
 		    } else {
 		    	for(int j = 0; j < m; j++){
 			    	System.out.printf("%d ", sum - j);
 			    }
-			    System.out.println();
 		    }
+		    System.out.println();
 		}
 	}
 }
