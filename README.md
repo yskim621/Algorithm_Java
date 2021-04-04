@@ -1,1 +1,1 @@
-# javaapp-practice
+# javaapp_Algorithm
