@@ -11,13 +11,13 @@ public class NumberRectangle {
 		System.out.print("숫자사각형의 너비로 사용할 숫자(100이하)를 입력하시오: ");
 		int m = sc.nextInt();
 		
-		if(n > 100) {
+		while(n > 100) {
 			System.out.println("100이하의 정수를 입력하세요!");
 			System.out.print("숫자사각형의 높이로 사용할 숫자(100아하)를 입력하시오: ");
 			n = sc.nextInt();
 		}
 		
-		if(m > 100) {
+		while(m > 100) {
 			System.out.println("100이하의 정수를 입력하세요!");
 			System.out.print("숫자사각형의 너비로 사용할 숫자(100아하)를 입력하시오: ");
 			m = sc.nextInt();
