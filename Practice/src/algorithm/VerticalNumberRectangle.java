@@ -29,6 +29,7 @@ public class VerticalNumberRectangle {
 			}
 			System.out.println();
 		}
+		sc.close();
 	}
 
 }

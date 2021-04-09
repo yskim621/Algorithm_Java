@@ -35,7 +35,7 @@ public class ReverseVerticalChracterRectangle {
 			System.out.println();
 		}
 		
-		
+		sc.close();
 	}
 
 }

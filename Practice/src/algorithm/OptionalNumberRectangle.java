@@ -56,7 +56,7 @@ public class OptionalNumberRectangle {
 			}
 			break;
 		}
-		
+		sc.close();
 	}
 
 }

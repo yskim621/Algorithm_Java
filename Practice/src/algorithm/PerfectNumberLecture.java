@@ -14,7 +14,7 @@ public class PerfectNumberLecture {
 			// 나누어 떨어지는 수 자신을 제외하는 경우에는 1부터 자신 / 2까지만 확인
 			
 			// 합을 구할 변수
-			int sum = 1;                                               // 최적화!
+			int sum = 1;      // 최적화!
 			for(int j=2; j<=i/2; j=j+1) {
 				// 나누어 떨어지는 경우에만 더하기
 				if(i % j == 0) {

@@ -29,7 +29,8 @@ public class NumberRectangle {
 		    	System.out.printf("%d ", sum++);
 		    }
 		    System.out.println();
-		}		
+		}
+		sc.close();
 	}
 
 }

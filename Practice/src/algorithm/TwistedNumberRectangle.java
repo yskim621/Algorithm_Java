@@ -37,5 +37,6 @@ public class TwistedNumberRectangle {
 		    }
 		    System.out.println();
 		}
+		sc.close();
 	}
 }

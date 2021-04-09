@@ -43,7 +43,7 @@ public class MeasureAndDrainage {
 				drainageSum += Integer.parseInt(arr[i]);
 			}
 		}
-		
+		sc.close();
 		System.out.println(measureSum);
 		System.out.println(drainageSum);
 	}

@@ -35,6 +35,7 @@ public class LeftSideChracterLsoscelesTriangle {
 			}
 			System.out.println();
 		}
+		sc.close();
 		
 	}
 

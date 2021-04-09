@@ -25,6 +25,7 @@ public class Multiplication {
 		
 		int num6 = num3 + (num4 * 10) + (num5 * 100);
 		
+		sc.close();
 		System.out.println(num3);
 		System.out.println(num4);
 		System.out.println(num5);

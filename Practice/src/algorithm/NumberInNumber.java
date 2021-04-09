@@ -78,7 +78,7 @@ public class NumberInNumber {
 		for(int i=0; i<cnt.length; i++) {
 			System.out.println(cnt[i]);
 		}
-		
+		sc.close();
 		
 		
 		

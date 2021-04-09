@@ -59,7 +59,7 @@ public class Gugudan2 {
 				System.out.println();
 			}
 			*/
-			
+			sc.close();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

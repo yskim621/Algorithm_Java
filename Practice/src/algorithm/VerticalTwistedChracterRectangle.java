@@ -42,6 +42,7 @@ public class VerticalTwistedChracterRectangle {
 			}
 			System.out.println();
 		}
+		sc.close();
 	}
 
 }

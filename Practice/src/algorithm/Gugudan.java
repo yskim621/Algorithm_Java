@@ -58,7 +58,7 @@ public class Gugudan {
 			}
 			*/
 			
-			
+			sc.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
