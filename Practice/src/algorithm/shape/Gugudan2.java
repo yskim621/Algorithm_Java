@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.shape;
 
 import java.util.Scanner;
 

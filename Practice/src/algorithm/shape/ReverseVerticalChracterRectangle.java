@@ -1,10 +1,11 @@
-package algorithm;
+package algorithm.shape;
 
 import java.util.Scanner;
 
-public class VerticalTwistedChracterRectangle {
+public class ReverseVerticalChracterRectangle {
 
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정사각형의 변으로 사용할 숫자(100아하)를 입력하시오: ");
 		int n = sc.nextInt();
@@ -18,20 +19,11 @@ public class VerticalTwistedChracterRectangle {
 		int sum = 65;
 		int[][] arr = new int[n][n]; 
 		for(int i=0; i<n; i++) {
-			if(i % 2 != 0) {
-				for(int j=0; j<n; j++) {
-					if(sum > 90) {
-						sum = 65;
-					}
-					arr[n-j-1][i] = sum++;
+			for(int j=0; j<n; j++) {
+				if(sum > 90) {
+					sum = 65;
 				}
-			} else {
-				for(int j=0; j<n; j++) {
-					if(sum > 90) {
-						sum = 65;
-					}
-					arr[j][i] = sum++;
-				}
+				arr[n-j-1][n-i-1] = sum++;
 			}
 		}
 		
@@ -42,6 +34,7 @@ public class VerticalTwistedChracterRectangle {
 			}
 			System.out.println();
 		}
+		
 		sc.close();
 	}
 
