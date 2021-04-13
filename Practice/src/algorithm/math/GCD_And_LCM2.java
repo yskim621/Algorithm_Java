@@ -1,35 +1,8 @@
 package algorithm.math;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GCD_And_LCM2 {
-	/* Second Method
-	static int gcd_get(int x, int y){
-	    int i, ans = 0;
-	    for (i = 1; i <= x; i++){
-	        if (x % i == 0 && y % i == 0){
-	            ans = i;
-	        }
-	    }
-	    return ans;
-	}
-	*/
-	
-	/* Third Method
-	 * 유클리드 호제법(Euclidean algorithm) : 
-		A를 B로 나눈 나머지가 r이라면 A와 B의 최대공약수는 B와 r의 최대공약수와 동일.
-		GCD(A, B) = GCD(B, r) 이 원리를 이용하면 두 수의 최대공약수를 도출 용이. 
-	static int gcd_get(int x, int y){
-	    int r;
-	    while (y!=0){   // y 0이면 x가 최대공약수이므로 종료한다.
-	        r = x % y; // 나머지를 구한후
-	        x = y; // x를 y로
-	        y = r; // y를 r로 바꾸고 다시 반복한다.
-	    }
-	    return x; // 최대공약수를 리턴한다.
-	}
-	*/
 	
 	static int gcd_get(int x, int y){
 	    if(y == 0) return x; // y 0이면 x가 최대공약수이다.
@@ -59,18 +32,25 @@ public class GCD_And_LCM2 {
 		}
 		
 		int gcd = gcd_get(Integer.parseInt(arr[0]), Integer.parseInt(arr[1]));
-		int lcm =Integer.parseInt(arr[0]) * Integer.parseInt(arr[1]) / gcd;
+		double lcm =  Double.parseDouble(arr[0]) * Double.parseDouble(arr[1]) / gcd;
 		for(int i=2; i<arr.length; i++) {
 			gcd = gcd_get(gcd, Integer.parseInt(arr[i]));
-			lcm = lcm  * Integer.parseInt(arr[i]) / gcd;
+			lcm = lcm * Double.parseDouble(arr[i]) / gcd;
 		}
- 		
-		System.out.printf("%d %d", gcd, lcm);
 		
-		
-		
-		
-		
+		if(lcm >= 2000000000) {
+			System.out.println("최소공배수가 int의 데이터 크기 형식인 20억을 넘는 수이므로 다른 수로 다시 진행하시길 바랍니다.");
+		} else {
+			System.out.printf("%d %d", gcd, (int)lcm);
+		}
+
+ 		/* Hint
+ 		 gcd = lcm = a[0];
+		 for (i=1; i < N; i++) { 
+    	  	gcd = gcd_get(gcd, a[i]); 
+    		lcm = lcm / gcd_get(lcm, a[i]) * a[i];
+		 }
+ 		 */
 		
 		sc.close();
 	}
