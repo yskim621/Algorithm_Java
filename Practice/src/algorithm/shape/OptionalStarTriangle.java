@@ -6,11 +6,11 @@ public class OptionalStarTriangle {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("삼각형의 높이로 사용할 숫자(100아하)를 입력하시오: ");
+		System.out.print("삼각형의 높이로 사용할 자연수(100아하)를 입력하시오: ");
 		int n = sc.nextInt();
 		while(n > 100) {
 			System.out.println("INPUT ERROR!");
-			System.out.print("정사각형의 변으로 사용할 숫자(100아하)를 입력하시오: ");
+			System.out.print("삼각형의 높이로 사용할 자연수(100아하)를 입력하시오: ");
 			n = sc.nextInt();
 		}
 		
@@ -18,7 +18,7 @@ public class OptionalStarTriangle {
 		int m = sc.nextInt();
 	
 		while(m > 3) {
-			System.out.println("3이하의 정수를 입력하세요!");
+			System.out.println("3이하의 자연수를 입력하세요!");
 			System.out.print("종류를 선택할 숫자(3아하)를 입력하시오: ");
 			m = sc.nextInt();
 		}
