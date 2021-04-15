@@ -2,7 +2,7 @@ package algorithm.shape;
 
 import java.util.Scanner;
 
-public class OptionalStarTriangle3 {
+public class AdvancedStarTriangle3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
