@@ -2,7 +2,7 @@ package algorithm.shape;
 
 import java.util.Scanner;
 
-public class OptionalStarTriangle {
+public class PascalTriangle {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -23,13 +23,19 @@ public class OptionalStarTriangle {
 			m = sc.nextInt();
 		}
 		
+		int[][] arr = new int[n][n];
+		
 		switch(m) {
 		case 1:
 			for(int i=0; i<n; i++) {
 				for(int j=0; j<=i; j++) {
-					System.out.print("*");
+					if(j == 0 || j == i) {
+						System.out.printf("%d ", 1);
+					} else {
+		
+					}
 				}
-				System.out.println();
+				System.out.println();			
 			}
 			break;
 		case 2:
