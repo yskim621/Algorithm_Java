@@ -22,28 +22,58 @@ public class OptionalPascalTriangle {
 			System.out.print("종류를 선택할 숫자(4아하)를 입력하시오: ");
 			m = sc.nextInt();
 		}
-		int x = 0, y = 0;
-		
+		int x, y;
+		int a, b, c, d;
 		
 		switch(m) {
 		case 1:
 			int[][] arr = new int[n][n];
-			for(int i=0; i<(int)Math.ceil(n/2)+1; i++) {
-				for(int j=0; j<=i; j++) {
-					if(j == 0 || j == i) {
+			for(int i=0; i<n; i++) {
+				for(int j=0; j<n; j++) {
+					if(j == 0 || i == j) {
 						arr[i][j] = 1;
-						System.out.printf("%d ", arr[i][j]);
-					} else {
-						arr[x][y] = arr[x-1][y-1] + arr[x-1][y];
+					} else if(i>=2 && j>=1){
+						arr[i][j] = arr[i-1][j-1] + arr[i-1][j];
 					}
+				}			
+			}
+			
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j <= i; j++) { // 대각선 기준 좌하단만 출력
+					System.out.printf("%d ", arr[i][j]);
 				}
-				System.out.println();			
+				System.out.println();
 			}
 			break;
 		case 2:
-			for(int i=0; i<n; i++) {
-				for(int j=0; j<n-i; j++) {
-					System.out.print("*");
+			a = n;
+			b = n;
+			c = n;
+			d = n;
+			arr = new int[n][2*n];
+			for(int i=0; i<(int) Math.ceil(n/2)+1; i++) {
+				for(int j=0; j<n; j++) {
+					if(i == 0) {
+						arr[--a][--b] = 1;
+						arr[--c][(++d)-2] = 1; 
+					} 
+				} // a=0, b=0, c=0, d=8
+				for(int j=0; j<n-2*i; j++) {
+					if(i>= 1) {
+						
+						arr[a][b] = arr[a+1][b-1] + arr[a+1][b+1];
+						arr[c][d] = arr[c+1][d-1] + arr[c+1][d+1];
+					}
+				}
+			}
+			
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j <2*n-1; j++) {
+					if( arr[i][j] != 0) {
+						System.out.printf("%d ", arr[i][j]);
+					} else {
+						System.out.print("* ");
+					}
 				}
 				System.out.println();
 			}
