@@ -15,37 +15,27 @@ public class PascalTriangle {
 		}
 		sc.nextLine();
 		
-		int[][] arr = new int[n+1][2*n];
-		int x = -1, y = n;
+		int[][] arr = new int[n][2*n];
+		int a, b, c, d;
 		
 		for(int i=0; i<(int)Math.ceil(n/2)+1; i++) {
 			if(i == 0) {
+				a = 0;
+				b = n-1;
+				c = 0;
+				d = n-1;
 				for(int j=0; j<n; j++) {
-					x++;
-					y--;
-					arr[x][y] = 1; 
-				}
-				x = 0;
-				y = n-1;
-				for(int j=0; j<n-1; j++) {
-					x++;
-					y++;
-					arr[x][y] = 1;
+					arr[a++][b--] = 1;
+					arr[c++][d++] = 1;
 				}
 			} else {
-				x = 2*i-1;
-				y = n;
+				a = 2*i-1;
+				b = n;
+				c = 2*i-1;
+				d = n-2;
 				for(int j=0; j<n-2*i; j++) {
-					x++;
-					y--;
-					arr[x][y] = arr[x-1][y-1] + arr[x-1][y+1];
-				}
-				x = 2*i-1;
-				y = n-2;
-				for(int j=0; j<n-2*i; j++) {
-					x++;
-					y++;
-					arr[x][y] = arr[x-1][y-1] + arr[x-1][y+1];
+					arr[++a][--b] = arr[a-1][b-1]+arr[a-1][b+1];
+					arr[++c][++d] = arr[c-1][d-1] + arr[c-1][d+1];
 				}
 			}
 		}
@@ -53,9 +43,9 @@ public class PascalTriangle {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j <2*n-1; ++j) { 
 				if(arr[i][j] != 0) {
-					System.out.printf("%d ", arr[i][j]);	
+					System.out.printf("%d", arr[i][j]);	
 				} else {
-					System.out.printf("%s ", " ");
+					System.out.printf("%s", " ");
 				}
 			}
 			System.out.println();
