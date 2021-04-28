@@ -43,7 +43,7 @@ public class SnailNumberRectangle {
 			System.out.println();
 		}
 		
-	
+		sc.close();
 		
 	}
 
