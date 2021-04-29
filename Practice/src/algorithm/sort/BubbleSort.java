@@ -22,9 +22,7 @@ public class BubbleSort {
 		
 		for(int imsi : arr) {
 			System.out.print(imsi + " ");
-		}
-		
-	    
+		}	    
 	}
 	
 	/*
