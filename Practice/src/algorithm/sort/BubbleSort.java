@@ -3,7 +3,7 @@ package algorithm.sort;
 public class BubbleSort {
 	
 	public static void main(String[] args) {
-		int[] arr = {5, 1, 38 , 12, 81, 24, 42, 9, 97, 123, 18, 70, 56, 69};
+		int[] arr = {5, 1, 38, 12, 81, 24, 42, 9, 97, 123, 18, 70, 56, 69};
 		for(int i=0; i<arr.length-1; i++) {
 			for(int j=0; j<arr.length-1; j++) {
 				if(arr[j] > arr[j+1]) {
