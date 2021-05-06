@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class OptionalPascalTriangle {
 
 	public static void main(String[] args) {
+		// Scanner 사용 시 예외 처리 필수(Try/Catch)
 		Scanner sc = new Scanner(System.in);
 		System.out.print("삼각형의 높이로 사용할 자연수(1이상, 30아하)를 입력하시오: ");
 		int n = sc.nextInt();
@@ -116,6 +117,7 @@ public class OptionalPascalTriangle {
 			}
 			break;
 		}
+		// OS 자원 반납
 		sc.close();
 	}
 
